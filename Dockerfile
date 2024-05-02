@@ -9,7 +9,7 @@ WORKDIR /tmp
 FROM adoptopenjdk/openjdk11:alpine-jre
 # Set the working directory in the container
 WORKDIR /tmp
-RUN ls -l /tmp/target
+CMD ["ls -l /tmp/target"]
 # Copy the built JAR file from the builder stage to the container
 COPY /tmp/target/spring-petclinic-*.jar app.jar
 # Expose the port that the application will run on
