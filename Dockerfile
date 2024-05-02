@@ -5,7 +5,7 @@ WORKDIR /tmp
 # Copy the project files to the container
 COPY . .
 # Build the Spring Boot application using Maven
-RUN mvn clean install -Dmaven.test.skip=true
+# RUN mvn clean install -Dmaven.test.skip=true
 # Use a lightweight base image for running the application
 FROM adoptopenjdk/openjdk11:alpine-jre
 # Set the working directory in the container
